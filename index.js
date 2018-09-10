@@ -76,6 +76,10 @@ program
             if (fileName && fileName.substring(0,3) === 'src') {
 
                 //ignore changes to the package.xml file
+                if(fileName === 'src/destructiveChanges.xml') {
+                    return;
+                }
+                
                 if(fileName === 'src/package.xml') {
                     return;
                 }
